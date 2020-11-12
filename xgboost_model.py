@@ -55,8 +55,8 @@ best_model = xgboost.train(
     dtrain,
     num_boost_round=num_boost_round,
 )
-print('Saving the model as best_model1.model')
-best_model.save_model("best_model1.model")
+print('Saving the model as best_model.model')
+best_model.save_model("best_model.model")
 print('Reading test data')
 X_test = pd.read_csv('cleaned_test.csv')
 dtest = xgboost.DMatrix(X_test.drop(columns = ['hotel_id']))
@@ -65,8 +65,8 @@ X_test['n_clicks'] = predicted_y
 # getting all negative prediction to 0
 X_test['n_clicks'] = np.where(X_test['n_clicks'] < 0,0,X_test['n_clicks'])
 final_result = X_test[['hotel_id','n_clicks']]
-print('Saving the prediction as predictions1.csv')
-final_result.to_csv('predictions1.csv')
+print('Saving the prediction as predictions.csv')
+final_result.to_csv('predictions.csv')
 
 
 
