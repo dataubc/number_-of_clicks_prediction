@@ -2,13 +2,17 @@
 Predicting the number of clicks for a hotel listing site
 
 
+To install requirements : 
 
-Base Model Model with Cross Validation:
+```
+python3 -m pip install xgboost
+```
 
-
-
-- cleaning train data
+Then to run the model and export the results
+```
+#cleaning train data
 python clean.py 'https://drive.google.com/file/d/1c85h1hzgzLvAeYSh-EVpY6Gz3dYLsd6R/view?usp=sharing' 'cleaned_train.csv' train
-- cleaning test data
+#cleaning test data
 python clean.py 'https://drive.google.com/file/d/13zo8AnjBsXBGHG-KKybxPG5D0Kc5p3-s/view?usp=sharing' 'cleaned_test.csv' test
-
+python python xgboost_model.py
+```

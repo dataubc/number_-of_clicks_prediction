@@ -2,10 +2,8 @@ import pandas as pd
 import numpy as np
 import requests
 from io import StringIO
-
 import matplotlib.pyplot as plt
 import time
-import pickle
 from pandas.plotting import scatter_matrix
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.pipeline import Pipeline
