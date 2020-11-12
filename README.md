@@ -5,7 +5,8 @@ Predicting the number of clicks for a hotel listing site
 To install requirements : 
 
 ```
-python3 -m pip install xgboost
+pip install -r requirements.txt
+
 ```
 
 Then to run the model and export the results
